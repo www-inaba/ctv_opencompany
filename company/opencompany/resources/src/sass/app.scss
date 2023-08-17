@@ -1,0 +1,27 @@
+// vendor settings & app confings
+@import "vendor/bundle";
+
+// app settigns
+// tips
+@import "app/tips/tips";
+
+// utils
+@import "app/utils/utils";
+@import "app/utils/animation";
+
+// plugins
+@import "app/plugins/plugins";
+
+// parts
+@import "app/parts/button";
+
+
+// components
+@import "app/components/header";
+@import "app/components/footer";
+@import "app/components/navigation";
+@import "app/components/megaMenu";
+@import "app/components/hamburger";
+
+// pages
+@import "app/pages/home";

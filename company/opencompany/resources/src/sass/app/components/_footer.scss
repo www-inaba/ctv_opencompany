@@ -1,0 +1,45 @@
+.c {
+  &_footer {
+    background: white;
+    padding: 140px 0 25px 0;
+    position: relative;
+    z-index: 4;
+    @include mq(m){
+      padding: 20px 0;
+    }
+    &-title {
+      margin-bottom: 15px;
+    }
+    &-list {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 110px;
+      @include mq(m){
+        display: none;
+      }
+      &-item {
+      }
+    }
+    &-copy {
+      text-align: center;
+      font-size: 12px;
+    }
+    &-navi {
+      &-list {
+        &-item {
+          line-height: 1.4;
+          font-size: 12px;
+          margin-bottom: 15px;
+          &-link {
+            align-items: center;
+            i {
+              display: block;
+              font-size: 10px;
+              margin: 0 0 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

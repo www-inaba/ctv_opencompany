@@ -1,0 +1,59 @@
+.u_letter-spacing {
+  &40 {
+    letter-spacing: 0.05em;
+  }
+  &100 {
+    letter-spacing: 0.1em;
+  }
+  &150 {
+    letter-spacing: 0.15em;
+  }
+  &200 {
+    letter-spacing: 0.14em;
+  }
+}
+.u_weight {
+  &500 {
+    font-weight: 500;
+  }
+  &700 {
+    font-weight: 700;
+  }
+}
+
+.u_vertical {
+  writing-mode: vertical-lr;
+}
+
+.u_lineHeight {
+  line-height: $lineHeight;
+}
+.u_lineHeightT {
+  line-height: 1.1;
+}
+.u_lineHeight18 {
+  line-height: 1.8;
+}
+.u_lineHeight12 {
+  line-height: 1.2;
+}
+
+.u_white {
+  color: white;
+}
+
+.u_center {
+  text-align: center;
+}
+
+.u_md {
+  display: none;
+  @include mq(m) {
+    display: block;
+  }
+}
+.u_desktop {
+  @include mq(m) {
+    display: none;
+  }
+}

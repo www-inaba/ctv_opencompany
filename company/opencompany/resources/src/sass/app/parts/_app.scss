@@ -1,0 +1,20 @@
+.p_app {
+  margin-bottom: 130px;
+  &-list {
+    width: 27.58%;
+    margin: 0 8.63% 0 0;
+    @include mq(m) {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+    &:nth-child(3n) {
+      margin: 0;
+    }
+    figcaption {
+      font-size: 18px;
+      @include mq(m) {
+        font-size: 14px;
+      }
+    }
+  }
+}

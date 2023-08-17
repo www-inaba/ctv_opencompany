@@ -1,0 +1,43 @@
+$font: (
+  size: (
+    pc: 15px,
+    // spはvwに変換される
+    sp: 28px,
+  ),
+  color: (
+    text: black,
+    a: black,
+  ),
+  family: (
+    default: (
+      "YakuHanJP",
+      "Noto Sans JP",
+      sans-serif,
+    ),
+    Heebo: (
+      'Heebo', sans-serif,
+    ),
+    min: (
+      'Noto Serif JP', serif,
+    ),
+  ),
+);
+
+$breakpoints: (
+  xxl: 1440px,
+  xl: 1280px,
+  l: 1024px,
+  m: 768px,
+  s: 414px,
+);
+
+//.t_txtのline-height
+$lineHeight: 2;
+
+// ここまで必須、以下自由定義
+
+$color: (
+  main: #DC000C,
+  bg: #3E3E3E,
+  line: #e3e3e3,
+);
