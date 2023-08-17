@@ -6,10 +6,21 @@
   color: white;
   position: relative;
   overflow: hidden;
-  &_title {
+  &_view {
     width: 100%;
-    font-size: get_vw(50px, xxl);
     z-index: 2;
+    @include mq(m){
+      width: 98%;
+    }
+  }
+  &_title {
+    flex-direction: column;
+    margin: 0 auto;
+    width: max-content;
+    font-size: get_vw(50px, xxl);
+    @include mq(m){
+      font-size: get_vw(62px, m);
+    }
     .line {
       border-bottom: 5px solid white;
     }

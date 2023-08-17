@@ -3,9 +3,15 @@
 .t_wrapper {
   width: get_vw(1000px, xxl);
   margin: 0 auto;
+  @include mq(m){
+    width: get_vw(816px, m);
+  }
 }
 
 .t_inner {
   width: get_vw(700px, xxl);
   margin: 0 auto;
+  @include mq(m){
+    width: get_vw(740px, m);
+  }
 }

@@ -2,7 +2,7 @@ $font: (
   size: (
     pc: 16px,
     // spはvwに変換される
-    sp: 28px,
+    sp: 32px,
   ),
   color: (
     text: black,
@@ -24,7 +24,7 @@ $breakpoints: (
   xxl: 1440px,
   xl: 1280px,
   l: 1024px,
-  m: 768px,
+  m: 896px,
   s: 414px,
 );
 

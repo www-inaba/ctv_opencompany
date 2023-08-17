@@ -13,4 +13,7 @@ body {
   font-family: #{map-get(map-get($font, family), default)};
   color: map-get(map-get($font, color), text);
   font-size: get_vw(16px, xxl);
+  @include mq(m){
+    font-size: get_vw(32px, m);
+  }
 }
