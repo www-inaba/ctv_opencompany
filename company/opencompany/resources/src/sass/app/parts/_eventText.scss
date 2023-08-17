@@ -1,0 +1,10 @@
+.p_eventText {
+  align-items: center;
+  margin-bottom: get_vw(30px, xxl);
+  p {
+    margin-right: get_vw(10px, xxl);
+  }
+  &-images {
+    width: get_vw(48px, xxl);
+  }
+}

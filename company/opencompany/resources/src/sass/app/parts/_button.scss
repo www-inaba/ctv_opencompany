@@ -1,52 +1,26 @@
 .p_button {
-  background: white;
-  width: 258px;
-  color: black;
-  padding: 15px;
-  text-align: center;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid white;
-  transition: 0.5s all var(--transition);
-  &:hover {
-    background: black;
-    color: white;
-  }
-  &__right {
-    margin-left: auto;
-  }
-  &__large {
-    padding: 30px;
-    font-size: 18px;
-  }
-  &__red {
-    background: var(--main-color);
-    border-color: var(--main-color);
-    color: white;
-    &:hover {
-      background: white;
-      color: var(--main-color);
-    }
-  }
-  &__black {
-    background: black;
-    border-color: black;
-    color: white;
-    &:hover {
-      background: white;
-      color: black;
-    }
-  }
-  span {
+  width: 100%;
+  display: block;
+  border: 2px solid white;
+  padding-top: get_vw(35px, xxl);
+  padding-right: get_vw(40px, xxl);
+  padding-bottom: get_vw(35px, xxl);
+  padding-left: get_vw(40px, xxl);
+  &-text {
     display: block;
+    text-align: center;
+    font-size: get_vw(20px, xxl);
   }
-  i {
-    display: block;
+  &-arrow{
     position: absolute;
-    right: 10px;
-    font-size: 10px;
+    right: get_vw(40px, xxl);
     top: 50%;
-    transform: scale(0.5) translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+    i {
+      margin-top: get_vw(1px, xxl);
+      color: var(--main-color);
+      font-size: get_vw(8px, xxl);
+    }
   }
 }

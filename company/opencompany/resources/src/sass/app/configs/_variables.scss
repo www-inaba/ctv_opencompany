@@ -1,6 +1,6 @@
 $font: (
   size: (
-    pc: 15px,
+    pc: 16px,
     // spはvwに変換される
     sp: 28px,
   ),
@@ -14,11 +14,8 @@ $font: (
       "Noto Sans JP",
       sans-serif,
     ),
-    Heebo: (
-      'Heebo', sans-serif,
-    ),
-    min: (
-      'Noto Serif JP', serif,
+    Montserrat: (
+      'Montserrat', sans-serif,
     ),
   ),
 );
@@ -37,7 +34,6 @@ $lineHeight: 2;
 // ここまで必須、以下自由定義
 
 $color: (
-  main: #DC000C,
-  bg: #3E3E3E,
-  line: #e3e3e3,
+  main: #FF3EAE,
+  bg: #F80A94,
 );

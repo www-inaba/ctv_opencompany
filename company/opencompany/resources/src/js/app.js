@@ -1,10 +1,3 @@
-import "./executes/_matchHeight";
 import "./executes/_scrollMagic";
-import "./executes/_openNav";
-import "./executes/_movie";
 import "./executes/_animation";
-import "./executes/_swiper";
-import "./executes/_fixed";
-import "./executes/_accordion";
-import "./executes/_loading";
 import "picturefill";

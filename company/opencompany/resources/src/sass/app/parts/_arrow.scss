@@ -1,0 +1,24 @@
+.p_arrow{
+  display: block;
+  width: get_vw(30px, xxl);
+  height: get_vw(30px, xxl);
+  background: white;
+  border-radius: 100%;
+  position: relative;
+  i {
+    display: block;
+    margin-top: get_vw(1px, xxl);
+    color: var(--main-color);
+    font-size: get_vw(8px, xxl);
+  }
+  &__black {
+    background: black;
+    i {
+      color: white;
+    }
+  }
+  &__small {
+    width: get_vw(20px, xxl);
+    height: get_vw(20px, xxl);
+  }
+}

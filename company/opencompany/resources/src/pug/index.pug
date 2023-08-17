@@ -2,224 +2,168 @@ extends /templates/_app
 
 block config
   - const _PATH = "./"
-  - const _PAGENAME = "internship"
+  - const _PAGENAME = "home"
 
 block meta
   +meta({
-    title: "百五銀行 インターンシップ",
-    description: "百五銀行のインターンシップサイトです。インターンシップに関する情報をご紹介しています。",
+    title: "オープンカンパニー｜中京テレビ",
+    description: "中京テレビのオープンカンパニー情報です。",
   })
 
 block content
 
-  header.internship_header
-    div.internship_header-body.t_flex
-      div.internship_header-logo.t_flex
-        a.internship_header-logo-link(href=`${_PATH}newgraduates.html`)
-          +img(`${_RESOURCES}assets/images/components/header/logo.svg`, `百五銀行`)
-        a(href=`${_PATH}newgraduates.html`).internship_header-logo-name.t_Heebo.u_letter-spacing100
-          |RECRUITING
-          br.u_md
-          |INFORMATION
+  div.mv.u_bg
+    div.mv_view.t_floater.u_lineHeight
+      h1.mv_title.u_weight900.u_letter-spacing40
+        p 中京テレビって、どんなとこ？
+        p
+          span.line こんなとこ！
+        p
+          span 若手社員の
+          span.flame リアルトーク
+          span で
+        p
+          span 会社を
+          span.border
+            span.border__parent 徹底解剖
+            span.border.border__clone 徹底解剖
+          span !
+        p
+          span オープンカンパニー開催決定！
+    p.p_mark.mv_mark__left.t_Montserrat ?
+    p.p_mark.mv_mark__right.t_Montserrat !
+  a.floating(href="https://page.line.me/764tntod?openQrModal=true" target="_blank")
+    +img(`${_RESOURCES}assets/images/index/banner_1.jpg`, `LINEアカウント`)
+  main
+    div.indexEvent.u_bg
+      div.t_inner
+        div.p_eventText.t_flex
+          p.u_weight900 イベントの予約は「中京テレビLINEアカウント」から！
+          div.p_eventText-images
+            +img(`${_RESOURCES}assets/images/index/character_1.png`, `チュウキョ～くん`)
 
-      nav.internship_header-navigation.internship_navigation
-        ul.internship_navigation-list.t_flex
-          li.internship_navigation-list-item
-            span.internship_navigation-list-item-link.internship_navigation-list-item-link__internship.u_letter-spacing100.t_Heebo
-              a(href="https://job.axol.jp/hy/s/hyakugo_25/entry/" target="_blank") ENTRY
-          li.internship_navigation-list-item
-            span.internship_navigation-list-item-link.internship_navigation-list-item-link__internship.u_letter-spacing100.t_Heebo
-              a(href="https://job.axol.jp/hy/s/hyakugo_25/mypage/login" target="_blank") MYPAGE
+        a.p_button(href="https://page.line.me/764tntod?openQrModal=true" target="_blank")
+          span.p_button-text.u_weight900 イベント予約はこちら
+          span.p_button-arrow.p_arrow
+            i.icon-arrow.t_floater
+    div.indexInfo.u_bg
+      p.indexInfo_flow.indexInfo_flow__top.u_letter-spacing100.t_Montserrat
+        span(data-anime="infinite" data-anime-direction="ltr" data-anime-clone="4" data-anime-duration="100") CHUKYO TV!
+      ul.t_flex.indexInfo_list
+        li.indexInfo_list-item
+          +img(`${_RESOURCES}assets/images/index/tv_2.jpg`, `キャッチ`)
+        li.indexInfo_list-item
+          +img(`${_RESOURCES}assets/images/index/tv_1.jpg`, `おもうまい店`)
 
-  div.internship_mv
-    div.internship_mv-box
-      div.internship_mv-box-img
-        +img(`${_RESOURCES}assets/images/internship/mv.png`,`5DAYS`)
-      div.internship_mv-box-txt.t_Heebo.u_letter-spacing40 INTERNSHIP
 
-  main.internship
-    section.internship_work
-      div.internship_work-box
-        h2.internship_work-box-head 「百五銀行で働く」を<br class="u_md">徹底的に考える5日間
 
-        div.internship_work-box-ttl.internship_p_ttl.internship_p_ttl__white
-          div.internship_p_ttl-en.t_Heebo POINT
-          div.internship_p_ttl-ja 特色・ポイント
+      div.t_wrapper.indexInfo_body
+        div.indexInfo_text.u_lineHeight.u_weight900
+          p
+            |全国ゴールデンで放送中の「オモウマい店」や地元密着の報道番組
+            br
+            |「キャッチ！」などを制作する名古屋のテレビ局、中京テレビ！
+        div.indexInfo_annotation.u_lineHeight.u_weight700
+          p
+            |…と、言われても、いったいどんな会社なのか、まだまだ分からないことが多いと思います。
+      p.indexInfo_flow.indexInfo_flow__bottom.u_letter-spacing100.t_Montserrat
+        span(data-anime="infinite" data-anime-direction="rtl" data-anime-clone="4" data-anime-duration="100") CHUKYO TV!
+      p.indexInfo_character
+        +img(`${_RESOURCES}assets/images/index/character_2.png`, `チュウキョ～くん`)
 
-        ul.internship_work-box-points
-          li.t_flex
-            div.internship_work-box-points-number.t_Heebo 1
-            p.internship_work-box-points-txt
-              | 難易度の高い数多くのグループワークを通じて、実際に銀行員が日々行っている実務を体感いただきます。「銀行業とは」という基本のところからお伝えしますので、事前知識は一切不要です。学部・学科は問いません。
-          li.t_flex
-            div.internship_work-box-points-number.t_Heebo 2
-            p.internship_work-box-points-txt
-              | 行員座談会、企業研究、個人面談、フィードバッグを通じて百五銀行で働く魅力を肌で感じていただきます。当行がこれから目指していく姿に加え、皆さまが「どのような仕事」をし、「どのようなキャリア」を歩んでいくのか、百五銀行の“ありのままの姿”をお伝えします。
-
-      div.internship_work-bg
-        +img(`${_RESOURCES}assets/images/internship/work.png`,`WORK AT 105`)
-
-    section.internship_movie
-      div.internship_movie-box.t_flex.t_wrapper
-        div.internship_movie-box--left
-          h2.internship_movie-box-ttl.internship_p_ttl.internship_p_ttl__white
-            div.internship_p_ttl-en.t_Heebo MOVIE
-            div.internship_p_ttl-ja.u_lineHeight18 百五銀行採用イメージムービー公開中
-          p.internship_movie-box-txt.u_lineHeight
-            | 目まぐるしく変化し、予測が難しい時代。<br>
-            | 気候変動リスクの顕在化や少子高齢化など私たちを取り巻く環境は刻々と変化しています。<br>
-            | 環境が変われば、新たなモノの見方や考え方が生まれ従来の意識や行動を変えていかなければなりません。<br>
-            | この時代における百五銀行の仕事やそのやりがいをインターンシップで体験してみませんか？
-
-        div.internship_movie-box--right
-          div.internship_movie-box--right-inner
-            .
-              <iframe src="https://www.youtube.com/embed/6Uqdrlly-l0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    section.internship_outline
-      div.t_wrapper
-        h2.internship_outline-ttl.internship_p_ttl
-          div.internship_p_ttl-en.t_Heebo OUTLINE
-          div.internship_p_ttl-ja.u_lineHeight12 実施概要
-
-        p.internship_outline-txt.u_lineHeightT 金融業界や地方銀行の役割について学べる他、5日間でさまざまな銀行業務が体験できるプログラムです。
-
-        table.internship_outline-table
-          tbody
-            tr
-              th 開催場所
-              td
-                p 丸之内本部棟（対面）<small class="internship_outline-table-note">※状況により、オンラインに変更になる場合がございます。</small>
-            tr
-              th 開催日数
-              td
-                p 合計5日間
-            tr
-              th 開催時期
-              td
-                ul.internship_outline-table-list
-                  li
-                    p.internship_outline-table-list-ttl
-                      span.internship_outline-table-list-ttl-num.t_Heebo [ 1 ]
-                      span.internship_outline-table-list-ttl-txt.t_Heebo 3DAYS INTERNSHIP
-                    p.internship_outline-table-list-txt 2023年8～12月開催予定
-                  li
-                    p.internship_outline-table-list-ttl
-                      span.internship_outline-table-list-ttl-num.t_Heebo [ 2 ]
-                      span.internship_outline-table-list-ttl-txt.t_Heebo 1DAY INTERNSHIP
-                    p.internship_outline-table-list-txt 2023年12月～2024年2月開催予定
-                    p: small ※ [ 1 ] にご参加いただいた方のみを対象として実施いたします。
-                  li
-                    p.internship_outline-table-list-ttl
-                      span.internship_outline-table-list-ttl-num.t_Heebo [ 3 ]
-                      span.internship_outline-table-list-ttl-txt.t_Heebo 1DAY INTERNSHIP
-                    p.internship_outline-table-list-txt 2023年12月～2024年2月開催予定
-                    p: small ※ [ 2 ] にご参加いただいた方のみを対象として実施いたします。
-
-      div.internship_outline-figure
-        div.internship_outline-figure-box
-          picture
-            source(media=`(min-width:769px)` srcset=`${_RESOURCES}assets/images/internship/table.png`)
-            source(media=`(max-width:768px)` srcset=`${_RESOURCES}assets/images/mobile/internship/table.png`)
-            +img(`${_RESOURCES}assets/images/internship/table.png`, `日程図`)
-
-      div.t_wrapper
-        p.internship_outline-figureCaption
-          span
-            | 当行のインターンシップは合計5日間<br class="u_md">のプログラムです。<br>
-            | ご参加を希望される方は、必ず [ 1 ] の<br class="u_md">日程からお申込みください。
-
-    section.internship_entry
-      div.t_wrapper
-        h2.internship_entry-ttl.t_Heebo ENTRY
-        p.internship_entry-txt
-          | 5日間のインターンシップの他にも、オンライン形式のオープンカンパニーの開催も予定しています。<br>
-          | 日程などの最新情報はマイページ内でご確認をお願いします。
-
-        a.internship_entry-btn.p_button.t_flex.p_button__large(href="https://job.axol.jp/hy/s/hyakugo_25/entry/" target="_blank")
-          span.u_weight700 エントリー
-          i.icon-arrow_right
-
-    section.internship_program
-      div.internship_program-copy.t_Heebo
-        span(data-anime="infinite" data-anime-clone="2" data-anime-duration="20") 105 INTERNSHIP
-
-      h2.internship_program-ttl.internship_p_ttl.t_wrapper
-        div.internship_p_ttl-en.t_Heebo PROGRAM
-        div.internship_p_ttl-ja.u_lineHeight12 プログラム
-
-      ul.internship_program-list
-        li
-          div.internship_program-list-img
-            +img(`${_RESOURCES}assets/images/internship/program.jpg`, `個人営業編`)
-            div.internship_program-list-img-num.t_Heebo 01
-
-          div.internship_program-list-box
-            div.internship_program-list-box-ttl 個人営業編
-            p.internship_program-list-box-txt
-              | 人生100 年時代といわれる今、お金に関する悩みを持つお客さまはたくさんいらっしゃいます。
+    section.indexOnline.u_bg
+      div.indexOnline_layout.t_flex
+        div.indexOnline_images
+          +img(`${_RESOURCES}assets/images/index/company_1.jpg`, `中京テレビ`)
+        div.indexOnline_view
+          h2.indexOnline_title.u_weight900.u_letter-spacing40 そこで！
+          div.indexOnline_text.u_lineHeight.u_weight700
+            p
+              | 中京テレビの仕事紹介イベントを対面＆オンラインで開催！
               br
-              | 銀行の個人営業担当は、そんなお客さまの不安を取り除き、一人ひとりが思い描くライフプランや夢を実現するためのお手伝いをする仕事です。このプログラムでは、ライフプランニングをグループワーク形式で体験してもらい、銀行の業界・仕事研究に役立ててもらうことを目的としています。
+              | 学生の皆さんと年齢の近い若手社員が登場し、
+              br
+              | 仕事内容を詳しく、リアルな言葉でご紹介します！
+              br
+              | さらに、「テレビ局って、忙しそう…」「番組制作以外にどんな仕事があるの？」などなど、
+              br
+              | 学生の皆さんが疑問＆不安に感じることに直接お答えいたします！
+            p
+              | 中京テレビのオープンカンパニー。
+              br
+              | このイベントを通じて、テレビ業界に対する知識を増やしていただければと思います！
 
-        li
-          div.internship_program-list-img
-            +img(`${_RESOURCES}assets/images/internship/program2.jpg`, `住宅ローン営業編`)
-            div.internship_program-list-img-num.t_Heebo 02
+    section.indexCompany
+      p.indexCompany_flow.indexCompany_flow__up.u_vertical.u_letter-spacing100.t_flex
+        span.t_Montserrat(data-anime="infinite" data-anime-direction="down" data-anime-duration="100" data-anime-clone="1") REAL & ONLINE
+      p.indexCompany_flow.indexCompany_flow__down.u_vertical.u_letter-spacing100.t_flex
+        span.t_Montserrat(data-anime="infinite" data-anime-direction="up" data-anime-duration="100" data-anime-clone="1") REAL & ONLINE
+      div.t_inner
+        h2.p_headline.u_weight900
+          span 中京テレビ オープンカンパニー
+        div.indexCompany_table.u_lineHeight
+          dl.t_flex
+            dt 日程
+            dd
+              p.u_weight900.large 2023年10月1日（日）13:00～16:00（予定）
+          dl.t_flex
+            dt 場所
+            dd
+              p
+                | 中京テレビ本社　多目的スペース「プラザC」
+                br
+                | 〒453-8704　 愛知県名古屋市中村区平池町四丁目60番地11
+              a(href="https://www.ctv.co.jp/company/about/access.html" target="_blank").t_flex
+                span.u_weight900 MAP＆アクセスはこちら
+                span.p_arrow.p_arrow__black.p_arrow__small
+                  i.icon-arrow.t_floater
 
-          div.internship_program-list-box
-            div.internship_program-list-box-ttl 住宅ローン営業編
-            p.internship_program-list-box-txt
-              | 人生において大きな買い物であるマイホーム購入。多くの方が住宅ローンを利用されています。<br>
-              | 銀行のローン営業担当は、マイホーム購入というお客さまの夢を融資を通じてお手伝いする仕事です。<br>
-              | このプログラムでは、ローン営業のための知識や考え方を、グループワーク形式で体験してもらい、銀行の業界・仕事研究に役立ててもらうことを目的としています。
 
-        li
-          div.internship_program-list-img
-            +img(`${_RESOURCES}assets/images/internship/program3.jpg`, `法人営業編`)
-            div.internship_program-list-img-num.t_Heebo 03
 
-          div.internship_program-list-box
-            div.internship_program-list-box-ttl 法人営業編
-            p.internship_program-list-box-txt
-              | 法人営業担当は、法人（いわゆる会社）を取引相手として仕事をしています。<br>
-              | 主要業務である融資業務では顧客ごとに財務分析を実施したのちに融資を実行しています。<br>
-              | このプログラムでは、法人営業のための知識や考え方を、グループワーク形式で体験してもらい、銀行の業界・仕事研究に役立ててもらうことを目的としています。
+          dl.t_flex
+            dt 実施形式
+            dd
+              | 対面＆オンラインのハイブリッド形式
 
-        li
-          div.internship_program-list-img
-            +img(`${_RESOURCES}assets/images/internship/program4.jpg`, `コンサルティング営業編`)
-            div.internship_program-list-img-num.t_Heebo 04
+          dl.t_flex
+            dt 募集対象
+            dd
+              | 大学生全学年（3年生を中心に全学年参加可）
+          dl.t_flex
+            dt 募集人数
+            dd
+              | 対面：80名程度　オンライン：200名程度
 
-          div.internship_program-list-box
-            div.internship_program-list-box-ttl コンサルティング営業編
-              div.internship_program-list-box-ttl-sub ～ M&A・PFI・ICT ～
-            p.internship_program-list-box-txt
-              | 地域の未来を切り拓いていくために、お客さまの課題をともに解決していく「課題解決型コンサルティング」の実践は欠かせません。<br>
-              | 事業承継問題の解決・企業の更なる成長戦略をサポートする「M&A」、公共インフラの整備を官民連携で推進するプロジェクトファイナンス手法の「PFI」、お客さまと地域社会のIT化を支援する「ICT」、これらのコンサルティング業務を中心にグループワーク形式で体験してもらいます。<br>
-              | このプログラムでは、百五銀行グループでできるコンサルティング業務の幅を実感してもらい、銀行の業界・仕事研究に役立ててもらえることを目的としています。<br>
-              | ※いずれか１つを体験していただきます。
-
-        li
-          div.internship_program-list-img
-            +img(`${_RESOURCES}assets/images/internship/program5.jpg`, `行員座談会`)
-            div.internship_program-list-img-num.t_Heebo 05
-
-          div.internship_program-list-box
-            div.internship_program-list-box-ttl 行員座談会
-            p.internship_program-list-box-txt
-              | 業界・企業研究に加え、実際に銀行で働く若手行員に質問していただきます。「銀行って堅いの？」、「残業は多いの？」、「ノルマは厳しいの？」など、皆さんが本当に知りたい疑問や聞きたい質問に、包み隠さずお答えします。<br>
-              | 行員座談会を通じて、百五銀行の働くフィールドや働く環境を理解していただき、百五銀行で働くリアルを感じていただきます。
-
-    section.internship_entry
+    section.indexVoice
       div.t_wrapper
-        h2.internship_entry-ttl.t_Heebo ENTRY
-        p.internship_entry-txt
-          | 5日間のインターンシップの他にも、オンライン形式のオープンカンパニーの開催も予定しています。<br>
-          | 日程などの最新情報はマイページ内でご確認をお願いします。
+        h2.p_headline.u_weight700.p_headline__white
+          span インターンシップ参加者の声
+        p.indexVoice_text.indexVoice_text__large.u_weight700
+          span 各部署で働く方々の熱い想いがとても伝わってきました。
+        p.indexVoice_text.indexVoice_text__regular.u_weight700.u_lineHeight
+          span
+            | 若手にもチャレンジする機会がたくさんあることなど、
+            br
+            | とても働きがいのある職場であることを知りました。
+        div.indexVoice_text.indexVoice_text__small.u_weight700.u_lineHeight.t_flex
+          p
+            span
+              | 今後テレビ業界は落ち込んでいくのではないかという不安がありましたが、テレビという枠組みがあるからこそ挑戦できることもまだまだたくさんあるのだと感じました。
+        p.indexVoice_text.indexVoice_text__small2.u_weight700.u_lineHeight
+          span
+            | テレビ局は文系のイメージだったが、
+            br
+            | 意外と理系でも活躍できると感じた。
+        p.indexVoice_text.indexVoice_text__small2.u_weight700.u_lineHeight
+          span
+            | テレビ局は文系のイメージだったが、
+            br
+            | 意外と理系でも活躍できると感じた。
+        div.indexVoice_text.indexVoice_text__Xlaege.u_weight700.u_lineHeight.t_flex
+          p
+            span
+              | 地域に密着し、人々に寄り添うことを第一に取材を行うことが、中京テレビの強みであると知りました。
 
-        a.internship_entry-btn.p_button.t_flex.p_button__large(href="https://job.axol.jp/hy/s/hyakugo_25/entry/" target="_blank")
-          span.u_weight700 エントリー
-          i.icon-arrow_right
 
-  footer.internship_footer
-    p: small Copyright © HYAKUGO BANK, LTD All Rights Reserved.
+  include /components/include/_footer
+

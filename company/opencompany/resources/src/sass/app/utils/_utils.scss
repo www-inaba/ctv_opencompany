@@ -19,6 +19,9 @@
   &700 {
     font-weight: 700;
   }
+  &900 {
+    font-weight: 900;
+  }
 }
 
 .u_vertical {
@@ -56,4 +59,8 @@
   @include mq(m) {
     display: none;
   }
+}
+
+.u_bg {
+  background: var(--main-color);
 }

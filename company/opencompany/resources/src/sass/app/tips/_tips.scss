@@ -1,21 +1,11 @@
 @use "sass:math";
 
 .t_wrapper {
-  padding-left: 10.27%;
-  padding-right: 10.27%;
+  width: get_vw(1000px, xxl);
   margin: 0 auto;
-  @include mq(m) {
-    padding-left: 9.6%;
-    padding-right: 9.6%;
-  }
 }
 
 .t_inner {
-  padding-left: 20.55%;
-  padding-right: 20.55%;
+  width: get_vw(700px, xxl);
   margin: 0 auto;
-  @include mq(m) {
-    padding-left: 9.6%;
-    padding-right: 9.6%;
-  }
 }

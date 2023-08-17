@@ -13,15 +13,16 @@
 @import "app/plugins/plugins";
 
 // parts
+@import "app/parts/arrow";
 @import "app/parts/button";
+@import "app/parts/eventText";
+@import "app/parts/headline";
+@import "app/parts/mark";
 
 
 // components
 @import "app/components/header";
 @import "app/components/footer";
-@import "app/components/navigation";
-@import "app/components/megaMenu";
-@import "app/components/hamburger";
 
 // pages
 @import "app/pages/home";

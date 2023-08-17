@@ -1,0 +1,46 @@
+-
+  const _META = {
+    title: "オープンカンパニー｜中京テレビ",
+    keywords: "",
+    description: "中京テレビのオープンカンパニー情報です。",
+    url: "https://www.ctv.co.jp/company/saiyo/opencompany/",
+    type: "website",
+    image: "https://www.ctv.co.jp/company/saiyo/opencompany/resources/static/meta/ogp.jpg",
+    siteName: ""
+  }
+
+mixin meta(options)
+  -
+    const base = Object.assign({}, _META, options);
+
+    const meta = {
+      title: base.title,
+      keywords: base.keywords,
+      description: base.description,
+
+      "og:type" : base.type,
+      "og:description" : base.description,
+      "og:title" : base.title,
+      "og:url" : base.url,
+      "og:siteName" : base.siteName,
+      "og:image" : base.image,
+
+      "twitter:cart" : 'summary',
+      "twitter:description" : base.description,
+      "twitter:title" : base.title,
+      "twitter:url" : base.url,
+      "twitter:image" : base.image,
+      "twitter:domain" : base.domain,
+      "twitter:image::width" : 1200,
+      "twitter:image::height" : 630,
+      "twitter:creator" : "",
+      "twitter:site" : "",
+    }
+
+  each val, key in meta
+    if( key === "title" )
+      title #{val}
+    else if( key.match(/^og:/) )
+      meta( property = key content = val)
+    else
+      meta( name = key content = val)

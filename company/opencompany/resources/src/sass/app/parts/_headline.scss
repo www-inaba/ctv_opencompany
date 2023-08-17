@@ -1,0 +1,22 @@
+.p {
+  &_headline {
+    text-align: center;
+    margin-bottom: get_vw(120px, xxl);
+    span {
+      color: white;
+      display: inline-block;
+      background: black;
+      font-size: get_vw(32px, xxl);
+      padding-top: get_vw(15px, xxl);
+      padding-right: get_vw(20px, xxl);
+      padding-bottom: get_vw(15px, xxl);
+      padding-left: get_vw(20px, xxl);
+    }
+    &__white {
+      span {
+        background: white;
+        color: #727272;
+      }
+    }
+  }
+}
