@@ -4,6 +4,7 @@
     padding-bottom: get_vw(170px, xxl);
     color: white;
     position: relative;
+    overflow: hidden;
     &-headline {
       font-size: get_vw(32px, xxl);
       margin-bottom: get_vw(40px, xxl);
