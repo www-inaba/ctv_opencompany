@@ -30,15 +30,18 @@ block content
           span !
         p
           span オープンカンパニー開催決定！
-    p.p_mark.mv_mark__left.t_Montserrat ?
-    p.p_mark.mv_mark__right.t_Montserrat !
+    p.p_mark.p_mark__left.t_Montserrat ?
+    p.p_mark.p_mark__right.t_Montserrat !
   a.floating(href="https://page.line.me/764tntod?openQrModal=true" target="_blank")
     +img(`${_RESOURCES}assets/images/index/banner_1.jpg`, `LINEアカウント`)
   main
     div.indexEvent.u_bg
       div.t_inner
         div.p_eventText.t_flex
-          p.u_weight900 イベントの予約は「中京テレビLINEアカウント」から！
+          p.u_weight900
+            |イベントの予約は
+            br.u_md
+            |「中京テレビLINEアカウント」から！
           div.p_eventText-images
             +img(`${_RESOURCES}assets/images/index/character_1.png`, `チュウキョ～くん`)
 
@@ -105,14 +108,21 @@ block content
           dl.t_flex
             dt 日程
             dd
-              p.u_weight900.large 2023年10月1日（日）13:00～16:00（予定）
+              p.u_weight900.large
+                |2023年10月1日（日）
+                b.u_md
+                |13:00～16:00（予定）
           dl.t_flex
             dt 場所
             dd
               p
-                | 中京テレビ本社　多目的スペース「プラザC」
+                | 中京テレビ本社　
+                br.u_md
+                |多目的スペース「プラザC」
                 br
-                | 〒453-8704　 愛知県名古屋市中村区平池町四丁目60番地11
+                | 〒453-8704　
+                br.u_md
+                | 愛知県名古屋市中村区平池町四丁目60番地11
               a(href="https://www.ctv.co.jp/company/about/access.html" target="_blank").t_flex
                 span.u_weight900 MAP＆アクセスはこちら
                 span.p_arrow.p_arrow__black.p_arrow__small
@@ -138,7 +148,7 @@ block content
       div.t_wrapper
         h2.p_headline.u_weight700.p_headline__white
           span インターンシップ参加者の声
-        p.indexVoice_text.indexVoice_text__large.u_weight700
+        p.indexVoice_text.indexVoice_text__large.u_weight700.u_lineHeight
           span 各部署で働く方々の熱い想いがとても伝わってきました。
         p.indexVoice_text.indexVoice_text__regular.u_weight700.u_lineHeight
           span

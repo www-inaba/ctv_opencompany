@@ -5,19 +5,42 @@
     color: white;
     position: relative;
     overflow: hidden;
+    @include mq(m){
+      padding-top: get_vw(270px, m);
+      padding-bottom: get_vw(270px, m);
+    }
+    &-body {
+      position: relative;
+      z-index: 2;
+    }
     &-headline {
       font-size: get_vw(32px, xxl);
       margin-bottom: get_vw(40px, xxl);
+      @include mq(m){
+        font-size: get_vw(64px, m);
+        margin-bottom: get_vw(50px, m);
+      }
     }
     &-button {
       margin-bottom: get_vw(50px, xxl);
+      @include mq(m){
+        margin-bottom: get_vw(90px, m);
+      }
     }
     &-list {
+      @include mq(m){
+        margin-bottom: get_vw(200px, m);
+      }
       &-item {
         width: 48%;
         margin: 0 4% 0 0;
         text-align: center;
         border: 2px solid white;
+        @include mq(m){
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: get_vw(30px, m);
+        }
         &:nth-child(2n) {
           margin: 0;
         }
@@ -25,6 +48,10 @@
           display: block;
           padding-top: get_vw(15px, xxl);
           padding-bottom: get_vw(15px, xxl);
+          @include mq(m){
+            padding-top: get_vw(30px, m);
+            padding-bottom: get_vw(30px, m);
+          }
         }
       }
     }
@@ -34,6 +61,14 @@
       left: 20px;
       bottom: 20px;
       font-size: get_vw(12px, xxl);
+      @include mq(m){
+        font-size: get_vw(24px,m);
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: get_vw(740px, m);
+        margin: 0 auto;
+      }
     }
   }
 }

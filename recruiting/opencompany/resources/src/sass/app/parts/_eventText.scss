@@ -1,10 +1,20 @@
 .p_eventText {
   align-items: center;
   margin-bottom: get_vw(30px, xxl);
+  @include mq(m){
+    line-height: 1.6;
+    margin-bottom: get_vw(40px, m);
+  }
   p {
     margin-right: get_vw(10px, xxl);
+    @include mq(m){
+      margin-right: get_vw(30px, m);
+    }
   }
   &-images {
     width: get_vw(48px, xxl);
+    @include mq(m){
+      width: get_vw(96px, m);
+    }
   }
 }

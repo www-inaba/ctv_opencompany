@@ -6,11 +6,24 @@
     top: 50%;
     transform: translateY(-50%) translateX(0);
     z-index: 1;
+    @include mq(m){
+      font-size: get_vw(700px, m);
+      transform: translateY(0) translateX(0);
+    }
     &__left {
       left: get_vw(-200px, xxl);
+      @include mq(m){
+        left: get_vw(-200px, m);
+        top: get_vw(150px, m);
+      }
     }
     &__right {
       right: get_vw(-100px, xxl);
+      @include mq(m){
+        right: get_vw(-100px, m);
+        top: auto;
+        bottom: get_vw(150px, m);
+      }
     }
   }
 }

@@ -7,20 +7,24 @@
   padding-right: get_vw(40px, xxl);
   padding-bottom: get_vw(35px, xxl);
   padding-left: get_vw(40px, xxl);
+  @include mq(m){
+    padding-top: get_vw(70px, m);
+    padding-right: get_vw(50px, m);
+    padding-bottom: get_vw(70px, m);
+    padding-left: get_vw(50px, m);
+  }
   &-text {
     display: block;
     text-align: center;
     font-size: get_vw(20px, xxl);
+    @include mq(m){
+      font-size: get_vw(40px, m);
+    }
   }
   &-arrow{
     position: absolute;
     right: get_vw(40px, xxl);
     top: 50%;
     transform: translateY(-50%) translateX(0);
-    i {
-      margin-top: get_vw(1px, xxl);
-      color: var(--main-color);
-      font-size: get_vw(8px, xxl);
-    }
   }
 }

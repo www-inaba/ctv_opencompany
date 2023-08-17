@@ -52,20 +52,6 @@
       }
     }
   }
-  &_mark {
-    font-size: get_vw(700px, xxl);
-    color: var(--bg-color);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(0);
-    z-index: 1;
-    &__left {
-      left: get_vw(-200px, xxl);
-    }
-    &__right {
-      right: get_vw(-100px, xxl);
-    }
-  }
 }
 .floating{
   display: block;
@@ -74,11 +60,17 @@
   right: 0;
   bottom: 0;
   width: get_vw(430px, xxl);
+  @include mq(m){
+    width: 100%;
+  }
 }
 .indexEvent {
   overflow: hidden;
   color: white;
   padding-bottom: get_vw(200px, xxl);
+  @include mq(m){
+    padding-bottom: get_vw(320px, m);
+  }
 }
 .indexInfo {
   overflow: hidden;
@@ -86,6 +78,10 @@
   padding-top: get_vw(160px, xxl);
   padding-bottom: get_vw(170px, xxl);
   position: relative;
+  @include mq(m){
+    padding-top: get_vw(150px, m);
+    padding-bottom: get_vw(150px, m);
+  }
   &_flow {
     font-size: get_vw(80px, xxl);
     color: var(--bg-color);
@@ -93,6 +89,9 @@
     top: 0;
     left: 0;
     white-space: nowrap;
+    @include mq(m){
+      font-size: get_vw(80px, m);
+    }
     span {
       display: inline-block;
       margin-right: get_vw(20px, xxl);
@@ -106,12 +105,27 @@
   &_list {
     justify-content: flex-end;
     margin-bottom: get_vw(100px, xxl);
+    @include mq(m){
+      flex-direction: column;
+      justify-content: inherit;
+      margin-bottom: get_vw(100px, m);
+    }
     &-item {
       margin-left: get_vw(50px, xxl);
       height: get_vw(260px, xxl);
       position: relative;
+      width: max-content;
+      @include mq(m){
+        height: get_vw(350px, m);
+        margin-bottom: get_vw(70px, m);
+      }
       &:last-child {
         margin-right: get_vw(20px, xxl);
+        @include mq(m){
+          margin-left: auto;
+          margin-right: get_vw(30px,m);
+          margin-bottom:0;
+        }
       }
       &:after {
         width: 100%;
@@ -122,6 +136,10 @@
         bottom: get_vw(-20px, xxl);
         z-index: 1;
         content: "";
+        @include mq(m){
+          right: get_vw(-30px, m);
+          bottom: get_vw(-30px, m);
+        }
       }
       img {
         width: auto;
@@ -134,12 +152,19 @@
   &_text {
     font-size: get_vw(22px, xxl);
     margin-bottom: get_vw(25px, xxl);
+    @include mq(m){
+      font-size: get_vw(48px, m);
+      margin-bottom: get_vw(50px, m);
+    }
   }
   &_character {
     width: get_vw(110px, xxl);
     position: absolute;
     bottom: 0;
     right: get_vw(150px, xxl);
+    @include mq(m){
+      display: none;
+    }
   }
 }
 .indexOnline {
@@ -148,12 +173,24 @@
   position: relative;
   color: white;
   overflow: hidden;
+  @include mq(m){
+    padding-top: get_vw(90px, m);
+    padding-bottom: get_vw(100px, m);
+  }
   &_layout {
     align-items: center;
+    @include mq(m){
+      flex-direction: column;
+      align-items: inherit;
+    }
   }
   &_images {
     width: get_vw(350px, xxl);
     position: relative;
+    @include mq(m){
+      width: get_vw(470px, m);
+      margin-bottom:get_vw(140px, m);
+    }
     &:after {
       width: 100%;
       height: 100%;
@@ -163,6 +200,10 @@
       bottom: get_vw(-20px, xxl);
       z-index: 1;
       content: "";
+      @include mq(m){
+        right: get_vw(-30px, m);
+        bottom: get_vw(-30px, m);
+      }
     }
     img {
       position: relative;
@@ -173,14 +214,27 @@
     padding-left: get_vw(100px, xxl);
     padding-right: get_vw(150px, xxl);
     width:calc(100% - #{get_vw(350px, xxl)} ) ;
+    @include mq(m){
+      width: get_vw(816px, m);
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &_title {
     font-size: get_vw(60px, xxl);
     margin-bottom: get_vw(30px, xxl);
+    @include mq(m){
+      font-size: get_vw(120px, m);
+      margin-bottom: get_vw(50px, m);
+    }
   }
   &_text {
     p {
       margin-bottom: get_vw(40px, xxl);
+      @include mq(m){
+        margin-bottom: get_vw(80px, m);
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -192,6 +246,10 @@
   padding-bottom: get_vw(180px, xxl);
   overflow: hidden;
   position: relative;
+  @include mq(m){
+    padding-top: get_vw(180px, m);
+    padding-bottom: get_vw(180px, m);
+  }
   &_flow {
     color: #F7F7F7;
     z-index: 1;
@@ -202,28 +260,24 @@
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
+    @include mq(m){
+      font-size: get_vw(118px, m);
+      width: get_vw(80px, m);
+    }
     &__up {
       left: get_vw(180px, xxl);
+      @include mq(m){
+        left: 0;
+      }
     }
     &__down{
       right: get_vw(180px, xxl);
+      @include mq(m){
+        right: 0;
+      }
     }
     span {
       display: block;
-    }
-  }
-  &_headline {
-    text-align: center;
-    margin-bottom: get_vw(120px, xxl);
-    span {
-      color: white;
-      display: inline-block;
-      background: black;
-      font-size: get_vw(32px, xxl);
-      padding-top: get_vw(15px, xxl);
-      padding-right: get_vw(20px, xxl);
-      padding-bottom: get_vw(15px, xxl);
-      padding-left: get_vw(20px, xxl);
     }
   }
   &_table {
@@ -231,22 +285,40 @@
     background: #F8F8F8;
     border-radius: 6px;
     font-size: get_vw(14px, xxl);
+    position: relative;
+    z-index: 3;
+    @include mq(m){
+      font-size: get_vw(28px, m);
+    }
     dl {
       padding-top: get_vw(30px, xxl);
       padding-right: get_vw(40px, xxl);
       padding-bottom: get_vw(30px, xxl);
       padding-left: get_vw(40px, xxl);
       border-bottom: 1px solid black;
+      align-items: center;
+      @include mq(m){
+        padding: get_vw(40px, m);
+      }
       &:last-child {
         border-bottom: none;
       }
       dt {
         width: get_vw(100px, xxl);
+        @include mq(m){
+          width: get_vw(170px, m);
+        }
       }
       dd {
         width:calc(100% - #{get_vw(100px, xxl)} ) ;
+        @include mq(m){
+          width:calc(100% - #{get_vw(170px, m)} ) ;
+        }
         .large {
           font-size: get_vw(22px, xxl);
+          @include mq(m){
+            font-size: get_vw(40px, m);
+          }
         }
         p {
           margin-bottom: get_vw(15px, xxl);
@@ -270,6 +342,10 @@
   background-image: url("./../../../resources/assets/images/components/bg.gif");
   background-repeat: repeat;
   background-size: 90px;
+  @include mq(m){
+    padding-top: get_vw(170px, m);
+    padding-bottom: get_vw(170px, m);
+  }
   &_text {
     color: white;
     span {
@@ -281,10 +357,18 @@
     &__large {
       font-size: get_vw(39px, xxl);
       margin-bottom: get_vw(90px, xxl);
+      @include mq(m){
+        font-size: get_vw(78px, m);
+        margin-bottom: get_vw(120px, m);
+      }
     }
     &__regular {
       font-size: get_vw(30px, xxl);
       margin-bottom: get_vw(110px, xxl);
+      @include mq(m){
+        font-size: get_vw(60px, m);
+        margin-bottom: get_vw(120px, m);
+      }
       span {
         background-size: 100% 3px;
       }
@@ -293,6 +377,11 @@
       font-size: get_vw(19px, xxl);
       width: get_vw(515px, xxl);
       margin-left: auto;
+      @include mq(m){
+        width: get_vw(590px, m);
+        font-size: get_vw(37px, m);
+        margin-bottom: get_vw(120px, m);
+      }
       span {
         background-size: 100% 2px;
       }
@@ -300,6 +389,10 @@
     &__small2 {
       font-size: get_vw(23px, xxl);
       margin-bottom: get_vw(110px, xxl);
+      @include mq(m){
+        font-size: get_vw(46px, xxl);
+        margin-bottom: get_vw(110px, xxl);
+      }
       span {
         background-size: 100% 2px;
       }
@@ -309,6 +402,10 @@
       width: get_vw(785px, xxl);
       font-size: get_vw(46px, xxl);
       justify-content: center;
+      @include mq(m){
+        font-size: get_vw(92px, xxl);
+        width: 100%;
+      }
     }
   }
 }
