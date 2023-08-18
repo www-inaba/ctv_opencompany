@@ -48,9 +48,16 @@
           display: block;
           padding-top: get_vw(15px, xxl);
           padding-bottom: get_vw(15px, xxl);
+          transition: 0.5s all var(--transition);
+          background: var(--main-color);
+          color: white;
           @include mq(m){
             padding-top: get_vw(30px, m);
             padding-bottom: get_vw(30px, m);
+          }
+          &:hover {
+            background: white;
+            color: var(--main-color);
           }
         }
       }

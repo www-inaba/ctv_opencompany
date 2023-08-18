@@ -7,11 +7,24 @@
   padding-right: get_vw(40px, xxl);
   padding-bottom: get_vw(35px, xxl);
   padding-left: get_vw(40px, xxl);
+  transition: 0.5s all var(--transition);
+  background: var(--main-color);
+  color: white;
   @include mq(m){
     padding-top: get_vw(70px, m);
     padding-right: get_vw(50px, m);
     padding-bottom: get_vw(70px, m);
     padding-left: get_vw(50px, m);
+  }
+  &:hover {
+    background: white;
+    color: var(--main-color);
+    .p_button-arrow {
+      background: var(--main-color);
+      i {
+        color: white;
+      }
+    }
   }
   &-text {
     display: block;

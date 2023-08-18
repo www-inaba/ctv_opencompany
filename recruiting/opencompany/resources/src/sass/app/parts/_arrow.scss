@@ -5,11 +5,13 @@
   background: white;
   border-radius: 100%;
   position: relative;
+  transition: 0.5s all var(--transition);
   @include mq(m){
     width: get_vw(60px, m);
     height: get_vw(60px, m);
   }
   i {
+    transition: 0.5s all var(--transition);
     display: block;
     margin-top: get_vw(1px, xxl);
     color: var(--main-color);
