@@ -78,21 +78,32 @@
     }
     .border {
       position: relative;
-      -webkit-text-stroke: 1px #FFF;
-      text-stroke: 1px #FFF;
       color: var(--main-color);
       margin-left: get_vw(15px, xxl);
       margin-right: get_vw(15px, xxl);
-      &__parent {
-        position: relative;
-        z-index: 2;
+      width: get_vw(210px, xxl);
+      vertical-align: middle;
+      .st0 {
       }
-      &__clone {
-        width: 100%;
-        position: absolute;
-        right: get_vw(-20px, xxl);
-        top: get_vw(-6px, xxl);
-        z-index: 1;
+      &.u_anime-start {
+        .st0 {
+          stroke: white;
+          stroke-dasharray: 1020;
+          stroke-width: 1px;
+          fill: transparent;
+          animation: line 5s ease-out .4 forwards;
+        }
+      }
+      @keyframes line {
+        0% {
+          stroke-dashoffset: 1020;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      @include mq(m){
+        width: get_vw(270px, m);
       }
     }
   }
@@ -349,6 +360,10 @@
     }
     span {
       display: block;
+      margin-bottom: get_vw(40px,xxl);
+      @include mq(m){
+        margin-bottom: get_vw(60px,m);
+      }
     }
   }
   &_table {
