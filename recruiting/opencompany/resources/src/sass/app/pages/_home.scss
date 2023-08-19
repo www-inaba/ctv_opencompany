@@ -354,7 +354,7 @@
       }
     }
     &__down{
-      right: get_vw(190px, xxl);
+      right: get_vw(180px, xxl);
       @include mq(m){
         right: 0;
       }
