@@ -18,7 +18,7 @@ block content
         p.u_anime-fadeUp(data-anime="addClass" data-anime-delay="0") 中京テレビって、どんなとこ？
         p
           span.line.u_anime-fadeUp(data-anime="addClass" data-anime-delay="100") こんなとこ！
-        p.t_flex
+        p.t_flex.u_lineHeight12
           span.u_anime-fadeUp(data-anime="addClass" data-anime-delay="200") 若手社員の
           span.flame.u_anime-fadeUp(data-anime="addClass" data-anime-delay="300")
             span リアルトーク
@@ -74,7 +74,7 @@ block content
           p
             |…と、言われても、いったいどんな会社なのか、まだまだ分からないことが多いと思います。
       p.indexInfo_flow.indexInfo_flow__bottom.u_letter-spacing100.t_Montserrat
-        span(data-anime="infinite" data-anime-direction="rtl" data-anime-clone="4" data-anime-duration="50") CHUKYO TV!
+        span(data-anime="infinite" data-anime-direction="rtl" data-anime-clone="4" data-anime-duration="50") CHUKYO TV?
       p.indexInfo_character
         +img(`${_RESOURCES}assets/images/index/character_2.png`, `チュウキョ～くん`)
 
@@ -171,7 +171,11 @@ block content
         div.indexVoice_text.indexVoice_text__Xlaege.u_weight700.u_lineHeight.t_flex.u_anime-fadeUp(data-anime="addClass")
           p
             span
-              | 地域に密着し、人々に寄り添うことを第一に取材を行うことが、中京テレビの強みであると知りました。
+              | 地域に密着し、人々に寄り添うことを
+              br
+              |第一に取材を行うことが、中京テレビの
+              br
+              |強みであると知りました。
 
 
   include /components/include/_footer

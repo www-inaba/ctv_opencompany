@@ -50,6 +50,7 @@
       color: var(--main-color);
       padding-left: get_vw(15px, xxl);
       padding-right: get_vw(15px, xxl);
+      padding-bottom: get_vw(5px, xxl);
       margin-left: get_vw(15px, xxl);
       margin-right: get_vw(15px, xxl);
       overflow: hidden;
@@ -337,14 +338,14 @@
     z-index: 1;
     position: absolute;
     font-size: get_vw(118px, xxl);
-    width: get_vw(80px, xxl);
+
     top: 0;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
     @include mq(m){
       font-size: get_vw(118px, m);
-      width: get_vw(80px, m);
+
     }
     &__up {
       left: get_vw(180px, xxl);
@@ -353,7 +354,7 @@
       }
     }
     &__down{
-      right: get_vw(180px, xxl);
+      right: get_vw(190px, xxl);
       @include mq(m){
         right: 0;
       }
@@ -497,12 +498,10 @@
     }
     &__Xlaege {
       margin: 0 auto;
-      width: get_vw(785px, xxl);
       font-size: get_vw(46px, xxl);
-      justify-content: center;
+      justify-content: right;
       @include mq(m){
         font-size: get_vw(92px, xxl);
-        width: 100%;
       }
     }
   }
