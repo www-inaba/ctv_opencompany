@@ -20,7 +20,7 @@
     font-size: get_vw(50px, xxl);
     @include mq(m){
       font-size: get_vw(62px, m);
-      margin-top: get_vw(-60px, m);
+      margin-top: get_vw(-120px, m);
     }
     span {
       display: inline-block;
