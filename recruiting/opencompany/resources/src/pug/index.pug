@@ -33,11 +33,17 @@ block content
           span オープンカンパニー開催決定！
     p.p_mark.p_mark__left.t_Montserrat ?
     p.p_mark.p_mark__right.t_Montserrat !
-  a.floating(href="https://page.line.me/764tntod?openQrModal=true" target="_blank")
-    span.off
-      +img(`${_RESOURCES}assets/images/index/banner_1.jpg`, `LINEアカウント`)
-    span.on
-      +img(`${_RESOURCES}assets/images/index/banner_1_on.jpg`, `LINEアカウント`)
+  ul.floating.t_flex
+    li.floating_item.floating_item__first
+      a(href="https://www.ctv.co.jp/" target="_blank")
+        +img(`${_RESOURCES}assets/images/index/banner_1.jpg`, `LINEアカウント`)
+
+    li.floating_item.floating_item__second
+      a(href="https://page.line.me/764tntod?openQrModal=true" target="_blank")
+        span.off
+          +img(`${_RESOURCES}assets/images/index/banner_2.jpg`, `LINEアカウント`)
+        span.on
+          +img(`${_RESOURCES}assets/images/index/banner_2_on.jpg`, `LINEアカウント`)
   main
     div.indexEvent.u_bg
       div.t_inner
