@@ -20,7 +20,7 @@
     font-size: get_vw(50px, xxl);
     @include mq(m){
       font-size: get_vw(62px, m);
-      margin-top: get_vw(-10px, m);
+      margin-top: get_vw(-60px, m);
     }
     span {
       display: inline-block;
@@ -31,13 +31,16 @@
       overflow: hidden;
       &:after {
         width: 100%;
-        height: 5px;
+        height: get_vw(5px, xxl);
         background: white;
         content: "";
         position: absolute;
         left: -100%;
         bottom: 0;
         transition: 0.5s left var(--transition) 1s;
+        @include mq(m){
+          height: get_vw(6px, m);
+        }
       }
       &.u_anime-start {
         &:after {
